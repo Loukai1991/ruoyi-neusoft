@@ -66,6 +66,18 @@ export const constantRoutes = [
       }
     ]
   },
+  // {
+  //   path: '/todo',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'todo',
+  //       component: (resolve) => require(['@/views/todo'], resolve),
+  //       name: 'todo',
+  //       meta: { title: '待办', icon: 'todo', noCache: true, affix: true }
+  //     }
+  //   ]
+  // },
   {
     path: '/user',
     component: Layout,
@@ -94,7 +106,7 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/job',
+    path: '/projects',
     component: Layout,
     hidden: true,
     children: [

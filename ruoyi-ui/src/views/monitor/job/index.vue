@@ -43,7 +43,7 @@
           icon="el-icon-plus"
           size="mini"
           @click="handleAdd"
-          v-hasPermi="['monitor:job:add']"
+          v-hasPermi="['monitor:projects:add']"
         >新增</el-button>
       </el-col>
       <el-col :span="1.5">
@@ -53,7 +53,7 @@
           size="mini"
           :disabled="single"
           @click="handleUpdate"
-          v-hasPermi="['monitor:job:edit']"
+          v-hasPermi="['monitor:projects:edit']"
         >修改</el-button>
       </el-col>
       <el-col :span="1.5">
@@ -63,7 +63,7 @@
           size="mini"
           :disabled="multiple"
           @click="handleDelete"
-          v-hasPermi="['monitor:job:remove']"
+          v-hasPermi="['monitor:projects:remove']"
         >删除</el-button>
       </el-col>
       <el-col :span="1.5">
@@ -72,7 +72,7 @@
           icon="el-icon-download"
           size="mini"
           @click="handleExport"
-          v-hasPermi="['monitor:job:export']"
+          v-hasPermi="['monitor:projects:export']"
         >导出</el-button>
       </el-col>
       <el-col :span="1.5">
@@ -81,7 +81,7 @@
           icon="el-icon-s-operation"
           size="mini"
           @click="handleJobLog"
-          v-hasPermi="['monitor:job:query']"
+          v-hasPermi="['monitor:projects:query']"
         >日志</el-button>
       </el-col>
       <right-toolbar :showSearch.sync="showSearch" @queryTable="getList"></right-toolbar>
@@ -111,14 +111,14 @@
             type="text"
             icon="el-icon-caret-right"
             @click="handleRun(scope.row)"
-            v-hasPermi="['monitor:job:changeStatus']"
+            v-hasPermi="['monitor:projects:changeStatus']"
           >执行一次</el-button>
           <el-button
             size="mini"
             type="text"
             icon="el-icon-view"
             @click="handleView(scope.row)"
-            v-hasPermi="['monitor:job:query']"
+            v-hasPermi="['monitor:projects:query']"
           >详细</el-button>
         </template>
       </el-table-column>
@@ -413,7 +413,7 @@ export default {
     },
     /** 任务日志列表查询 */
     handleJobLog() {
-      this.$router.push("/job/log");
+      this.$router.push("/projects/log");
     },
     /** 新增按钮操作 */
     handleAdd() {
